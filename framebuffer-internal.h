@@ -228,7 +228,7 @@ private:
       unsigned int p4_b2          : 1;  // 43
 
     } bits;
-    uint32_t raw;
+    uint64_t raw;
     IoBits() : raw(0) {}
   };
 #endif

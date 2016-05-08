@@ -21,7 +21,7 @@
 #include <vector>
 
 
-#define RGB_SLOWDOWN_GPIO 1
+#define RGB_SLOWDOWN_GPIO 2
 
 // Putting this in our namespace to not collide with other things called like
 // this.
@@ -40,7 +40,7 @@ class GPIO {
 
   // Initialize outputs.
   // Returns the bits that are actually set.
-  uint32_t InitOutputs(uint32_t outputs);
+  uint64_t InitOutputs(uint64_t outputs);
 
   // Set the bits that are '1' in the output. Leave the rest untouched.
   inline void SetBits(uint32_t value) {

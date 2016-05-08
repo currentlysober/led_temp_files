@@ -128,8 +128,8 @@ Framebuffer::~Framebuffer() {
   b.bits.a = b.bits.b = b.bits.c = b.bits.d = 1;
 
   // Initialize outputs, make sure that all of these are supported bits.
-  const uint32_t result = io->InitOutputs(b.raw);
-  assert(result == b.raw);
+  const uint64_t result = io->InitOutputs(b.raw);
+  assert(result == (uint32_t)b.raw);
 
   // Now, set up the PinPulser for output enable.
   IoBits output_enable_bits;

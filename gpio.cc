@@ -99,7 +99,7 @@ namespace rgb_matrix {
 GPIO::GPIO() : output_bits_(0), gpio_port_(NULL) {
 }
 
-uint32_t GPIO::InitOutputs(uint32_t outputs) {
+uint64_t GPIO::InitOutputs(uint64_t outputs) {
   if (gpio_port_ == NULL) {
     fprintf(stderr, "Attempt to init outputs but not yet Init()-ialized.\n");
     return 0;
